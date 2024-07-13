@@ -1,7 +1,7 @@
 Package: MyDataTools
 Type: Package
 Title: A Package for Loading and Plotting Data
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: 
     person("Przemyslaw", "Miskowiec", email = "przemekmiskowiec@gmail.com", role = c("aut", "cre"))
 Maintainer: The package maintainer <przemekmiskowiec@gmail.com>
