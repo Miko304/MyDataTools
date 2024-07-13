@@ -9,6 +9,9 @@
 #' @return A ggplot object.
 #' @export
 #' @examples
+#' library(ggplot2)
+#' # Example using mtcars dataset for line plot
+#' data <- mtcars
 #' autoplot(data, "cyl", "mpg", "line")
 #' autoplot(data, "cyl", "mpg", "scatter")
 #' autoplot(data, "cyl", "NULL", "histogramm")

@@ -22,6 +22,9 @@ A ggplot object.
 This function plots data from a data frame using ggplot2.
 }
 \examples{
+library(ggplot2)
+# Example using mtcars dataset for line plot
+data <- mtcars
 autoplot(data, "cyl", "mpg", "line")
 autoplot(data, "cyl", "mpg", "scatter")
 autoplot(data, "cyl", "NULL", "histogramm")
