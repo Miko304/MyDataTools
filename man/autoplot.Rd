@@ -22,7 +22,6 @@ A ggplot object.
 This function plots data from a data frame using ggplot2.
 }
 \examples{
-\dontrun{
   library(ggplot2)
   data <- mtcars
 
@@ -41,5 +40,4 @@ This function plots data from a data frame using ggplot2.
   # Example using mtcars dataset for bar plot
   p <- autoplot(data, "cyl", plot_type = "bar")
   print(p)
-}
 }

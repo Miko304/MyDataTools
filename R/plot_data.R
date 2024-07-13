@@ -9,7 +9,6 @@
 #' @return A ggplot object.
 #' @export
 #' @examples
-#' \dontrun{
 #'   library(ggplot2)
 #'   data <- mtcars
 #'
@@ -28,7 +27,7 @@
 #'   # Example using mtcars dataset for bar plot
 #'   p <- autoplot(data, "cyl", plot_type = "bar")
 #'   print(p)
-#' }
+
 autoplot <- function(data, x, y = NULL, plot_type = "line") {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("ggplot2 package is required but not installed.")
