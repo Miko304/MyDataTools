@@ -9,26 +9,28 @@
 #' @return A ggplot object.
 #' @export
 #' @examples
-#' \dontrun{
-#'   library(ggplot2)
-#'   data <- mtcars
+#' library(ggplot2)
+#' data <- mtcars
 #'
-#'   # Example using mtcars dataset for line plot
-#'   p <- autoplot(data, "cyl", "mpg", "line")
-#'   print(p)
+#' # Example using mtcars dataset for line plot
+#' p <- autoplot(data, "cyl", "mpg", "line")
+#' print(p)
 #'
-#'   # Example using mtcars dataset for scatter plot
-#'   p <- autoplot(data, "cyl", "mpg", "scatter")
-#'   print(p)
+#' # Example using mtcars dataset for scatter plot
+#' p <- autoplot(data, "cyl", "mpg", "scatter")
+#' print(p)
 #'
-#'   # Example using mtcars dataset for histogram
-#'   p <- autoplot(data, "mpg", plot_type = "histogram")
-#'   print(p)
+#' # Example using mtcars dataset for histogram
+#' p <- autoplot(data, "mpg", plot_type = "histogram")
+#' print(p)
 #'
-#'   # Example using mtcars dataset for bar plot
-#'   p <- autoplot(data, "cyl", plot_type = "bar")
-#'   print(p)
-#' }
+#' # Example using mtcars dataset for bar plot
+#' p <- autoplot(data, "cyl", plot_type = "bar")
+#' print(p)
+#'
+#' # Example using mtcars dataset for bar plot with y
+#' p <- autoplot(data, "cyl", "mpg", "bar")
+#' print(p)
 
 autoplot <- function(data, x, y = NULL, plot_type = "line") {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
@@ -55,10 +57,21 @@ autoplot <- function(data, x, y = NULL, plot_type = "line") {
     }
     p <- ggplot2::ggplot(data, ggplot2::aes_string(x = x)) + ggplot2::geom_histogram()
   } else if (plot_type == "bar") {
-    p <- p + ggplot2::geom_bar(stat = "identity")
+    if (is.null(y)) {
+      p <- ggplot2::ggplot(data, ggplot2::aes_string(x = x)) + ggplot2::geom_bar()
+    } else {
+      p <- ggplot2::ggplot(data, ggplot2::aes_string(x = x, y = y)) + ggplot2::geom_bar(stat = "identity")
+    }
   } else {
     stop("Unsupported plot type")
   }
 
   return(p)
 }
+
+
+
+
+
+
+

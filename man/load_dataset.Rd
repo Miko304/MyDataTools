@@ -13,8 +13,10 @@ load_dataset(file_path)
 A data frame containing the loaded data
 }
 \description{
-This function loads datasets from .csv, .xls, .xlsx, and .txt files
+This function loads datasets from .csv, .xls, .xlsx,
 }
 \examples{
 data <- load_dataset("data.csv")
+data <- load_dataset("data.xls")
+data <- load_dataset("data.xlsx")
 }

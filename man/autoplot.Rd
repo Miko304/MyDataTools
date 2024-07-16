@@ -22,24 +22,26 @@ A ggplot object.
 This function plots data from a data frame using ggplot2.
 }
 \examples{
-\dontrun{
-  library(ggplot2)
-  data <- mtcars
+library(ggplot2)
+data <- mtcars
 
-  # Example using mtcars dataset for line plot
-  p <- autoplot(data, "cyl", "mpg", "line")
-  print(p)
+# Example using mtcars dataset for line plot
+p <- autoplot(data, "cyl", "mpg", "line")
+print(p)
 
-  # Example using mtcars dataset for scatter plot
-  p <- autoplot(data, "cyl", "mpg", "scatter")
-  print(p)
+# Example using mtcars dataset for scatter plot
+p <- autoplot(data, "cyl", "mpg", "scatter")
+print(p)
 
-  # Example using mtcars dataset for histogram
-  p <- autoplot(data, "mpg", plot_type = "histogram")
-  print(p)
+# Example using mtcars dataset for histogram
+p <- autoplot(data, "mpg", plot_type = "histogram")
+print(p)
 
-  # Example using mtcars dataset for bar plot
-  p <- autoplot(data, "cyl", plot_type = "bar")
-  print(p)
-}
+# Example using mtcars dataset for bar plot
+p <- autoplot(data, "cyl", plot_type = "bar")
+print(p)
+
+# Example using mtcars dataset for bar plot with y
+p <- autoplot(data, "cyl", "mpg", "bar")
+print(p)
 }
