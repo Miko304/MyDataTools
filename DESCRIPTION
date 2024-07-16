@@ -1,16 +1,16 @@
 Package: MyDataTools
 Type: Package
 Title: A Package for Loading and Plotting Data
-Version: 0.1.5
+Version: 0.1.7
 Authors@R: 
     person("Przemyslaw", "Miskowiec", email = "przemekmiskowiec@gmail.com", role = c("aut", "cre"))
 Maintainer: The package maintainer <przemekmiskowiec@gmail.com>
 Description: 
     MyDataTools is an R package designed to simplify the process of loading and visualizing datasets.
-    The package provides two main functions, load_dataset() and autoplot(). 
+    The package provides two main functions, load_dataset() and plot_data(). 
     The load_dataset() function supports loading data from various file formats including CSV, Excel, and text files, 
     automatically detecting the file type and using the appropriate method to read the data into R.
-    The autoplot() function leverages the powerful ggplot2 package to create customizable line, scatter, histograms and bar plots 
+    The plot_data() function leverages the powerful ggplot2 package to create customizable line, scatter, histograms and bar plots 
     with minimal code, enabling users to quickly visualize their data for analysis and presentation.
 License: MIT
 Encoding: UTF-8

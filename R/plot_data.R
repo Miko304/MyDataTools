@@ -1,10 +1,10 @@
-#' Auto plot dataset
+#' Plot dataset
 #'
 #' This function plots data from a data frame using ggplot2.
 #'
 #' @param data A data frame containing the data to be plotted.
 #' @param x The name of the column to be used for the x-axis.
-#' @param y The name of the column to be used for the y-axis (optional for histogram).
+#' @param y The name of the column to be used for the y-axis (optional for histogram and bar plot).
 #' @param plot_type The type of plot ("line", "scatter", "histogram", "bar").
 #' @return A ggplot object.
 #' @export
@@ -13,26 +13,26 @@
 #' data <- mtcars
 #'
 #' # Example using mtcars dataset for line plot
-#' p <- autoplot(data, "cyl", "mpg", "line")
+#' p <- plot_data(data, "cyl", "mpg", "line")
 #' print(p)
 #'
 #' # Example using mtcars dataset for scatter plot
-#' p <- autoplot(data, "cyl", "mpg", "scatter")
+#' p <- plot_data(data, "cyl", "mpg", "scatter")
 #' print(p)
 #'
 #' # Example using mtcars dataset for histogram
-#' p <- autoplot(data, "mpg", plot_type = "histogram")
+#' p <- plot_data(data, "mpg", plot_type = "histogram")
 #' print(p)
 #'
 #' # Example using mtcars dataset for bar plot
-#' p <- autoplot(data, "cyl", plot_type = "bar")
+#' p <- plot_data(data, "cyl", plot_type = "bar")
 #' print(p)
 #'
 #' # Example using mtcars dataset for bar plot with y
-#' p <- autoplot(data, "cyl", "mpg", "bar")
+#' p <- plot_data(data, "cyl", "mpg", "bar")
 #' print(p)
 
-autoplot <- function(data, x, y = NULL, plot_type = "line") {
+plot_data <- function(data, x, y = NULL, plot_type = "line") {
   if (!requireNamespace("ggplot2", quietly = TRUE)) {
     stop("ggplot2 package is required but not installed.")
   }
@@ -68,10 +68,3 @@ autoplot <- function(data, x, y = NULL, plot_type = "line") {
 
   return(p)
 }
-
-
-
-
-
-
-
