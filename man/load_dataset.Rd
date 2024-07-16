@@ -16,7 +16,7 @@ A data frame containing the loaded data
 This function loads datasets from .csv, .xls, .xlsx,
 }
 \examples{
-data <- load_dataset("data.csv")
-data <- load_dataset("data.xls")
-data <- load_dataset("data.xlsx")
+data <- load_dataset("path/to/data.csv")
+data <- load_dataset("path/to/data.xls")
+data <- load_dataset("path/to/data.xlsx")
 }
